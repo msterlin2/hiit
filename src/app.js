@@ -206,7 +206,7 @@ if (resetDefaultsButton) {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const serviceWorkerUrl = new URL("../service-worker.js", import.meta.url);
+      const serviceWorkerUrl = new URL("./service-worker.js", import.meta.url);
       await navigator.serviceWorker.register(serviceWorkerUrl);
     } catch (_err) {
       // No-op for MVP scaffold if service worker registration fails.
